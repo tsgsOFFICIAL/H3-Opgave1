@@ -9,10 +9,6 @@ span {
     justify-content: space-between;
 }
 
-.col {
-    max-width: 45%;
-}
-
 img {
     max-width: 100%;
     border-radius: 62% 38% 30% 70% / 54% 49% 51% 46%;
