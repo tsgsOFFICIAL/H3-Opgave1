@@ -1,1 +1,63 @@
-<p>geometry works!</p>
+<div class="row">
+    <div class="col-md-6">
+        <span>
+            <input type="radio" id="rectangle" name="pick_shape" value="Rectangle" checked (change)="pick_shape_changed($event)">
+            <label for="rectangle">Rectangle</label>
+        </span>
+
+        <span>
+            <input type="radio" id="square" name="pick_shape" value="Square" (change)="pick_shape_changed($event)">
+            <label for="square">Square</label>
+        </span>
+
+        <span>
+            <input type="radio" id="trapez" name="pick_shape" value="Trapez" (change)="pick_shape_changed($event)">
+            <label for="trapez">Trapez</label>
+        </span>
+
+        <span>
+            <input type="radio" id="parallelogram" name="pick_shape" value="Parallelogram" (change)="pick_shape_changed($event)">
+            <label for="parallelogram">Parallelogram</label>
+        </span>
+    </div>
+
+    <div class="col-md-6">
+        <span class="flex">
+            <h3 class="h4 mg-rg">Areal: </h3>
+            <p class="underline">0.00</p>
+        </span>
+
+        <span class="flex">
+            <h3 class="h4 mg-rg">Circumference: </h3>
+            <p class="underline">0.00</p>
+        </span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <span *ngIf="selectedShape != 'Parallelogram';">
+            <label for="value-a">A: </label>
+            <input type="number" id="value-a" value="0.00">
+        </span>
+
+        <span *ngIf="selectedShape != 'Square' && selectedShape != 'Parallelogram';">
+            <label for="value-b">B: </label>
+            <input type="number" id="value-b" value="0.00">
+        </span>
+
+        <span *ngIf="selectedShape == 'Trapez' || selectedShape == 'Parallelogram';">
+            <label for="value-h">H: </label>
+            <input type="number" id="value-h" value="0.00">
+        </span>
+
+        <span *ngIf="selectedShape == 'Parallelogram';">
+            <label for="value-g">G: </label>
+            <input type="number" id="value-g" value="0.00">
+        </span>
+    </div>
+
+    <div class="col-md-6">
+        <img src="assets/img/{{ selectedShape }}.png" [alt]="selectedShape">
+    </div>
+</div>

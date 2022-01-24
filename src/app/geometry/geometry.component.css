@@ -1,0 +1,30 @@
+div {
+    margin: 0;
+}
+
+span {
+    display: block;
+    width: fit-content;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.mg-rg {
+    margin-right: .5rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
