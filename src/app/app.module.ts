@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MyPalComponent } from './my-pal/my-pal.component';
+import { GeometryComponent } from './geometry/geometry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyPalComponent
+    MyPalComponent,
+    GeometryComponent
   ],
   imports: [
     BrowserModule
