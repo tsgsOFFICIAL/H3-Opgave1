@@ -1,0 +1,25 @@
+span {
+    width: 100vw;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.col {
+    max-width: 45%;
+}
+
+img {
+    max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
