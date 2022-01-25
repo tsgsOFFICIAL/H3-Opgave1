@@ -1,10 +1,8 @@
 export class Square {
     a: number;
-    b: number;
     
-    constructor(a: number, b: number) {
+    constructor(a: number) {
         this.a = a;
-        this.b = b;
     }
 
     getArea(): number {
