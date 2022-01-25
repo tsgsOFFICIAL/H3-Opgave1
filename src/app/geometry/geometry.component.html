@@ -24,12 +24,12 @@
     <div class="col-md-6">
         <span class="flex">
             <h3 class="h4 mg-rg">Areal: </h3>
-            <p class="underline">0.00</p>
+            <p class="underline">{{ area }}</p>
         </span>
 
         <span class="flex">
             <h3 class="h4 mg-rg">Circumference: </h3>
-            <p class="underline">0.00</p>
+            <p class="underline">{{ circumference }}</p>
         </span>
     </div>
 </div>
@@ -38,22 +38,22 @@
     <div class="col-md-6">
         <span *ngIf="selectedShape != 'Parallelogram';">
             <label for="value-a">A: </label>
-            <input type="number" id="value-a" value="0.00">
+            <input type="number" id="value-a" value="0.00" [(ngModel)]="value_a" (keyup)="calculate()">
         </span>
 
         <span *ngIf="selectedShape != 'Square' && selectedShape != 'Parallelogram';">
             <label for="value-b">B: </label>
-            <input type="number" id="value-b" value="0.00">
+            <input type="number" id="value-b" value="0.00" [(ngModel)]="value_b" (keyup)="calculate()">
         </span>
 
         <span *ngIf="selectedShape == 'Trapez' || selectedShape == 'Parallelogram';">
             <label for="value-h">H: </label>
-            <input type="number" id="value-h" value="0.00">
+            <input type="number" id="value-h" value="0.00" [(ngModel)]="value_h" (keyup)="calculate()">
         </span>
 
         <span *ngIf="selectedShape == 'Parallelogram';">
             <label for="value-g">G: </label>
-            <input type="number" id="value-g" value="0.00">
+            <input type="number" id="value-g" value="0.00" [(ngModel)]="value_g" (keyup)="calculate()">
         </span>
     </div>
 
